@@ -28,7 +28,9 @@ Another way to retrieve your Public IP address, other than checking in AWS Web c
 ![installation of mysql](./images/installingmysql.PNG)
 
 
-`sudo mysql_secure_installation` required to create a password or decline. The password setting requires 8 characters with special character, upper/lower case, and numbers.
+`sudo mysql_secure_installation` 
+
+required to create a password or decline. The password setting requires 8 characters with special character, upper/lower case, and numbers.
 
 ![mysql is secure](./images/secureinstallmysql.PNG)
 
@@ -64,7 +66,6 @@ Installed both package at onces, types yes to continue installation
 `sudo nano /etc/nginx/sites-available/projectLEMP`
 
 
-![sudo nano](./images/sudonano.PNG)
 
 This will create a new blank file. Paste in the following bare-bones configuration:
 
@@ -93,6 +94,8 @@ server {
     }
 
 }`
+
+![sudo nano](./images/sudonano.PNG)
 
 To exit type ctrl +x then y, and enter to confirm
 
