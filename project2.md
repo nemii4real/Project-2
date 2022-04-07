@@ -10,6 +10,9 @@ instaling nginx `sudo apt install nginx`
 ![nginx running](./images/nginxrunning.PNG)
 
 `curl http://127.0.0.1:80` or `curl http://localhost:80` 
+
+
+
 change port to 80 on AWS(security tab) when instance is running, before running this commads.
 
 ![Nginx web service responds to ‘curl’ command](./images/curl%20responded.PNG)
@@ -245,6 +248,9 @@ content VARCHAR(255), PRIMARY KEY(item_id));`
 ![mysql to do list](./images/mysqltodolist.PNG)
 
 
+
+
+
 Had an error message because I included mysql and did not add both bracket. code command was not listed as above, so had to copy command into a different page and remove mysql, and also add the extra bracket. this was the command listed to paste.                     `CREATE TABLE example_database.todo_list (
 mysql>     item_id INT AUTO_INCREMENT,
 mysql>     content VARCHAR(255),
@@ -316,7 +322,11 @@ http://18.234.232.26/todo_list.php
 
 
 
+
+
 ![php connected](./images/todolist-running-on-web.PNG)
+
+
 
 
 Result after password was included in reference to above screenshoot. That means PHP environment is ready to connect and interact with MySQL server.
