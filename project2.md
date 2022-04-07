@@ -9,7 +9,8 @@ instaling nginx `sudo apt install nginx`
 
 ![nginx running](./images/nginxrunning.PNG)
 
-`curl http://127.0.0.1:80` or `curl http://localhost:80` change port to 80 on AWS(security tab) when instance is running, before running this commads.
+`curl http://127.0.0.1:80` or `curl http://localhost:80` 
+change port to 80 on AWS(security tab) when instance is running, before running this commads.
 
 ![Nginx web service responds to ‘curl’ command](./images/curl%20responded.PNG)
 
@@ -65,9 +66,13 @@ Installed both package at onces, types yes to continue installation
 
 ![sudo nano](./images/sudonano.PNG)
 
-#/etc/nginx/sites-available/projectLEMP
+This will create a new blank file. Paste in the following bare-bones configuration:
+
+`#/etc/nginx/sites-available/projectLEMP
+
 
 server {
+
     listen 80;
     server_name projectLEMP www.projectLEMP;
     root /var/www/projectLEMP;
@@ -87,7 +92,7 @@ server {
         deny all;
     }
 
-}
+}`
 
 To exit type ctrl +x then y, and enter to confirm
 
@@ -142,10 +147,11 @@ The echo  command showing means the Nginx site is working as it should.
 
 
 `sudo nano /var/www/projectLEMP/info.php`
- Run this command below in the blank space.
+ 
+ Run this command below in the blank space after running the command above.
 
  `<?php
-phpinfo();` To exit use ctrl x to save and enter to exit.
+phpinfo();` 
 
 
 
@@ -208,7 +214,7 @@ C. `CREATE USER 'example_user'@'%' IDENTIFIED WITH mysql_native_password BY 'pas
 Had a very diffcult time trying to create the passowrd, so many error message. Deleted and started all over, not sure what the problem was, but fixed it by deleting everything.
 
 
-`mysql> exit`    control delete
+`mysql> exit`    ctrl d
 
 
 
@@ -236,7 +242,7 @@ content VARCHAR(255), PRIMARY KEY(item_id));`
 ![mysql to do list](./images/mysqltodolist.PNG)
 
 
-Had an error message because I included mysql and did not add both bracket. code command was not listed as above, so had to copy command into a different page and remove mysql, and also add the extra bracket. this was the command listed to paste.  `CREATE TABLE example_database.todo_list (
+Had an error message because I included mysql and did not add both bracket. code command was not listed as above, so had to copy command into a different page and remove mysql, and also add the extra bracket. this was the command listed to paste.                     `CREATE TABLE example_database.todo_list (
 mysql>     item_id INT AUTO_INCREMENT,
 mysql>     content VARCHAR(255),
 mysql>     PRIMARY KEY(item_id)
@@ -308,6 +314,8 @@ http://18.234.232.26/todo_list.php
 
 
 ![php connected](./images/todolist-running-on-web.PNG)
+
+
 Result after password was included in reference to above screenshoot. That means PHP environment is ready to connect and interact with MySQL server.
 
 
